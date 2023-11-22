@@ -1,0 +1,56 @@
+.achievements {
+    padding: 30px 30px 30px 30px;
+    background: $bg-color;
+
+    &__title {
+        text-align: center;
+        font-size: 14px;
+        font-weight: 700;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        color: $main-color;
+        margin-bottom: 30px;
+    }
+
+    &__swiper {
+        margin-bottom: 30px;
+    }
+
+    &__wrapper {
+    }
+
+    &__slide {
+        overflow: hidden;
+        border-radius: $radius-md; 
+    }
+
+    &__slide-box {
+            width: 100%;
+            height: 90px;
+            padding: 25px 0px 25px 0px;
+            background: $basic-white;
+            display: flex;
+            flex: 1 0 0;
+            justify-content: center;
+    }
+
+        &__slide-image {
+    }
+}
+
+.swiper {
+}
+.swiper-wrapper {
+}
+.swiper-slide {
+}
+
+.achievements .swiper-pagination {
+    position: static;
+}
+
+.achievements .swiper-pagination-bullet {
+    width: 16px;
+    height: 16px;
+    background: $regular-color;
+}

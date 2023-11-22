@@ -4,11 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About us</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
     <link rel="stylesheet" href="css/style.min.css">
 </head>
 <body>
 
-    <div class="head head__about">
+    <section class="head head__about">
         <header class="head__header header--mg">
             <div class="container header__container">
                 <div class="header__inner header__inner--innercol">
@@ -68,11 +69,11 @@
                 </nav>
             </div>
         </header>
-    </div>
+    </section>
 
 
-    <div class="intro">
-        <div class="container ">
+    <section class="intro">
+        <div class="container intro__flex">
             <div class="intro_all">
                 <h2 class="intro_all-title">We turn over the idea of legal services</h2>
                 <p class="intro_all-text">Consolidating many years of experience and practice, the company's lawyers
@@ -113,13 +114,13 @@
                 </ul>
             </div>
         </div>
-    </div>
+    </section>
 
-    <div class="photo">
+    <section class="photo">
         <p class="photo_title">Team</p>
-    </div>
+    </section>
 
-    <div class="more">
+    <section class="more">
         <div class="container">
             <div class="more__item">
                 <p class="more__item-text">The historically unchanged legal profession has begun to reformat in recent
@@ -136,7 +137,50 @@
                 <h2 class="more__item-title">Quality is what we care about the most.</h2>
             </div>
         </div>
-    </div>
+    </section>
+
+    <section class="achievements">
+        <div class="container">
+            <h3 class="achievements__title">achievements</h3>
+            <div class="swiper achievements__swiper">
+                <div class="swiper-wrapper achievements__wrapper">
+                    <div class="swiper-slide achievements__slide">
+                        <div class="achievements__slide-box">
+                            <div class="achievements__slide-image">
+                                <img src="images/achievments/achievment-1.png" alt="legal" width="54" height="40"
+                                    loading="lazy">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide achievements__slide">
+                        <div class="achievements__slide-box">
+                            <div class="achievements__slide-image">
+                                <img src="images/achievments/achievment-2.png" alt="legal" width="106" height="40"
+                                    loading="lazy">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide achievements__slide">
+                        <div class="achievements__slide-box">
+                            <div class="achievements__slide-image">
+                                <img src="images/achievments/achievment-3.png" alt="legal" width="130" height="40"
+                                    loading="lazy">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide achievements__slide">
+                        <div class="achievements__slide-box">
+                            <div class="achievements__slide-image">
+                                <img src="images/achievments/achievment-4.png" alt="legal" width="110" height="40"
+                                    loading="lazy">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="swiper-pagination"></div>
+        </div>
+    </section>
 
     <footer class="footer">
         <div class="container">
@@ -163,12 +207,11 @@
     </footer>
 
     <svg xmlns="http://www.w3.org/2000/svg" class="hidden">
-        <symbol viewBox="0 0 12 26" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <g id="slash">
+        <symbol id="slash" viewBox="0 0 12 26" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g >
             <path fill-rule="evenodd" clip-rule="evenodd" d="M8.72827 0H11.9505L3.55574 26H0.333496L8.72827 0Z" fill="#F0145A"/>
             </g>
         </symbol>
-
 
 		<symbol viewBox="0 0 24 24" id="facebook">
 			<g clip-path="url(#clip0_22721_6686)">
@@ -195,7 +238,7 @@
         </symbol>
     </svg>
 
-
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 	<script src="js/main.min.js"></script>
 </body>
 </html>

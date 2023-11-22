@@ -1,16 +1,27 @@
 .more {
-
+    &__item {
+        @include viewport-lg {
+            display: flex;
+            gap: 60px;
+        }
+    }
 
     &__item-text {
         font-size: 19px;
         font-weight: 400;
         line-height: 30px;
         margin-bottom: 30px;
+        @include viewport-lg {
+            flex: 1 1 60%;
+        }
     }
 
     &__item-title {
         @include subtitle;
         @include main-gradient-text;
         margin-bottom: 60px;
+        @include viewport-lg {
+            flex: 1 1 40%;
+        }
     }
 }

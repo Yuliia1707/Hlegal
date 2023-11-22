@@ -41,7 +41,18 @@ if(teamSwiper) {
 	pagination: {
 		el: '.swiper-pagination',
 	},
-
 });
 }
 
+const achievmentsSwiper = new Swiper('.achievements__swiper', {
+	loop: true,
+	spaceBetween: 40,
+	// speed: 2000,
+	// autoplay: {
+    //     delay: 1000,
+	// },
+	grabCursor: true,
+	pagination: {
+	    el: '.swiper-pagination',
+	},
+});
