@@ -1,0 +1,102 @@
+.footer {
+    background: $bg-color;
+
+    &__container {
+        border-top: 2px solid $separator-color;
+        padding: 30px 0;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        align-items: center;
+        @include viewport-md {
+            flex-direction: row;
+            justify-content: space-between;
+            flex-flow: wrap;
+            &>.one {
+                order: 1;
+                }
+            &>.two {
+                    order: 3;
+                }
+            &>.three {
+                    order: 2;
+                    justify-content: end;
+                }
+        }
+        &--line {
+            border-top: 0;
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            padding: 30px 0;
+            @include viewport-md {
+                flex-direction: row;
+            justify-content: space-between;
+            flex-flow: wrap;
+            &>.one {
+                order: 1;
+                }
+            &>.two {
+                    order: 3;
+                }
+            &>.three {
+                    order: 2;
+                    justify-content: end;
+                }
+            }
+        }
+    }
+
+    &__box {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+        @include viewport-md {
+            flex-direction: row;
+            flex: 1 1 45%;
+        }
+    }
+
+    &__box-adres {
+        font-size: 16px;
+        font-weight: 400;
+        color: $main-color;
+    }
+
+    &__box-link {
+        font-size: 12px;
+        font-weight: 700;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        text-decoration: none;
+        @include base-link ($regular-color)
+    }
+
+    &__box-svg {
+        width: 38px;
+        height: 38px;
+        fill: $regular-color;
+    }
+
+    &__box-tel {
+        font-size: 16px;
+        font-weight: 700;
+        text-decoration: none;
+        @include base-link ($alt-color)
+    }
+
+    &__box-mail {
+        font-size: 16px;
+        font-weight: 700;
+        @include base-link ($regular-color)
+    }
+
+    &__box-text {
+        font-size: 16px;
+        font-weight: 400;
+        color: $text-color;
+    }
+}
+
+

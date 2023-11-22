@@ -1,0 +1,353 @@
+.head {
+    min-height: 100vh;
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
+    position: relative;
+    background: url('../images/hlegal.png') no-repeat center / auto 100%;
+    &.head__about {
+        min-height: 0;
+        background: $basic-white;
+    }
+
+    &.head__bg {
+        background: $gradient-supersoft;
+        border-radius: 0px 0px 12px 12px;
+    }
+
+
+    &_title {
+        text-transform: lowercase;
+        text-align: center;
+    }
+
+    &_link {
+        width: 42px;
+        height: 42px;
+        border-radius: $radius-rounded;
+        border: 1px solid $basic-white;
+        margin: 0 auto 30px;
+        position: relative;
+        &:hover {
+            border-color: $accent-color;
+        }
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: 10px;
+            left: 13px;
+            width: 14px;
+            height: 14px;
+            border-bottom: 2px solid $basic-white;
+            border-left: 2px solid $basic-white;
+            transform: rotate(-45deg);
+        }
+        &:hover::before,
+        &:hover::after{
+                border-color: $accent-color;
+        } 
+    }
+}
+.header {
+    &--mg {
+        margin-bottom: 30px;
+    }
+    @include viewport-md {
+        padding: 50px 0 0;
+        &--mg {
+            padding: 50px 0 0;
+        }
+    }
+
+    &__container {
+        position: relative;
+    }
+
+    &__inner {
+        background: rgba(245, 245, 250, 0.20);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 30px;
+        margin: 0 -30px 15px;
+        &--innercol {
+            background: $bg-color;
+        }
+
+        @include viewport-md {
+            margin: 0 0 30px;
+            padding: 0;
+            background: transparent;
+            justify-content: flex-start;
+            gap: 6px;
+        }
+
+        @include viewport-lg {
+            margin-bottom: 16px;
+            justify-content: flex-end;
+        }
+    }
+
+    &__langs {
+        display: flex;
+    }
+
+    &__langs-item {}
+
+    &__langs-link {
+        color: $basic-white;
+        text-transform: uppercase;
+        font-weight: 700;
+        font-size: 12px;
+        border-radius: $radius-sm;
+        display: block;
+        text-decoration: none;
+        padding: 5px 7px;
+
+        &--gray {
+            color: $text-color;
+            fill: $text-color;
+            }
+
+
+        &.active {
+            background: $accent-color;
+            color: $basic-white;
+        }
+    }
+
+        &__adress {
+            display: none;
+
+            @include viewport-md {
+                display: block;
+                color: $text-color;
+            }
+        }
+
+        &__phone {
+            text-decoration: none;
+            color: $basic-white;
+            font-weight: 700;
+            &--gray {
+                color: $text-color;
+            }
+        }
+
+        &__social {
+            display: none;
+                @include viewport-md {
+                    display: block;
+                    color: $basic-white;
+                    font-weight: 700;
+                svg {
+                    width: 24px;
+                    height: 25px;
+                    fill: $basic-white;
+                    &.header__social--gray {
+                        fill: $text-color;
+                    }
+                }
+            }
+        }
+
+        &__box {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            @include viewport-md {
+                margin-bottom: 30px;
+            }
+            @include viewport-lg {
+                margin-bottom: 0;
+                position: absolute;
+                top: 50%;
+                left: 30px;
+                transform: translateY(-50%)
+                
+            }
+        }
+
+        &__box-logo {
+            img {
+                width: 70px;
+                height: 32px;
+                @include viewport-md {
+                    width: 130px;
+                    height: 60px;
+                }
+            }
+            &--near {
+            display: flex;
+            align-items: normal;
+            gap: 5px;
+            text-decoration: none;
+        }
+        }
+        
+        &__box-slash {
+            width: 12px;
+            height: 26px;
+            @include viewport-md {
+                width: 21px;
+                height: 47px;
+            }
+        }
+
+        &__box-services {
+            font-size: 20px;
+            font-weight: 400;
+            color: $basic-white;
+            @include viewport-md {
+                font-size: 36px;
+            }
+            &--servcol {
+                color: $main-color;
+            }
+        }
+
+        &__box-burger {
+            width: 24px;
+            height: 16px;
+            position: relative;
+            cursor: pointer;
+
+            &::before,
+            &::after,
+            span {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                height: 2px;
+                background: $basic-white;
+            }
+            &--burgcol::before {
+                background: $main-color;
+            }
+            &--burgcol span {
+                background: $main-color;
+            }
+            &--burgcol::after {
+                background: $main-color;
+            }
+
+            &::after {
+                top: auto;
+                bottom: 0;
+            }
+
+            span {
+                top: 50%;
+                transform: translateY(-50%);
+            }
+
+            @include viewport-md {
+                display: none;
+            }
+
+        }
+
+        &__nav {
+            border-radius: $radius-md $radius-md 0 0;
+		    padding: 12px;
+		    position: fixed;
+		    z-index: 50;
+		    bottom: 0;
+		    left: 8px;
+		    right: 8px;
+		    background: $basic-white;
+		    transform: translateY(101%);
+		    transition: transform .2s linear;
+
+		&.active {
+			transform: translateY(0);
+		}
+		@include viewport-md {
+			position: static;
+			border-radius: 0;
+			padding: 0;
+			background: transparent;
+            transform: translateY(0);
+		}
+        }
+
+        &__nav-close {
+            width: 28px;
+            height: 28px;
+            margin-bottom: 20px;
+            margin-left: auto;
+            cursor: pointer;
+            position: relative;
+    
+            &::before, &::after {
+                content: '';
+                position: absolute;
+                top: 50%;
+                left: 0;
+                right: 0;
+                height: 2px;
+                background: $accent-color;
+                transform: rotate(-45deg);
+            }
+    
+            &::after {
+                transform: rotate(45deg);
+            }
+            @include viewport-md {
+                display: none;
+            }
+
+        }
+
+        &__list {
+            display: flex;
+            flex-flow: column;
+            gap: 15px;
+            @include viewport-md {
+                flex-flow: row;
+            }
+            @include viewport-lg {
+                justify-content: flex-end;
+            }
+        }
+
+        &__list-item {}
+
+        &__list-link {
+            display: block;
+		    padding-bottom: 3px;
+		    @include base-link($regular-color);
+		    font-weight: 700;
+		    border-bottom: 2px solid transparent;
+		    font-size: 24px;
+		    padding: 10px 0;
+		    background: $text-color;
+		    text-align: center; 
+            @include viewport-md {
+                border-bottom: 2px solid transparent;
+                @include base-link;
+                font-size: 16px;
+                padding: 0;
+                background: transparent;
+                &--linkcol {
+                    color: $regular-color;
+                }
+            }
+            
+    
+            &.active {
+                color: $accent-color;
+                border-color: $accent-color;
+            }
+    
+            &--blue {
+                @include base-link($regular-color);
+            }
+        }
+    }
+
+
+

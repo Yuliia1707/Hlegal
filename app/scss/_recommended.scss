@@ -1,0 +1,74 @@
+.recommended {
+    background: $bg-color;
+    padding-bottom: 30px;
+    padding-top: 30px;
+    &__link {
+        @include base-link ($regular-color);
+        @include psevdolink 
+    }
+
+
+    &__title {
+        @include subtitle;
+        @include main-gradient-text;
+        margin: 5px 0 30px 0;
+    }
+
+    &__cards {
+        @include viewport-md {
+            display: flex;
+            flex-flow: wrap;
+            gap: 30px;
+        }
+    }
+
+    &__cards-card {
+        background: $basic-white;
+        // margin-top: 30px;
+        overflow: hidden;
+        border-radius: 8px 8px 8px 8px;
+        div {
+            padding: 30px;
+        }
+        @include viewport-md {
+            flex: 1 1 40%;
+        }
+        @include viewport-lg {
+            flex: 1 1 20%;
+        }
+    }
+
+    &__cards-card-img {
+        object-fit: cover;
+        width: 100%;
+        height: 200px;
+    }
+
+    &__cards-card-title {
+        font-size: 16px;
+        font-weight: 700;
+        color: $regular-color;
+
+    a {
+        text-decoration: none;
+        @include base-link ($regular-color);
+    }
+    }
+
+    &__cards-card-subtitle {
+        font-size: 12px;
+        font-weight: 700;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        margin: 15px 0;
+        color: $text-color;
+    }
+
+    &__cards-card-text {
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 22px;
+        border-top: 4px solid $separator-color;
+        padding-top: 15px;
+    }
+}
