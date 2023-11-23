@@ -23,6 +23,9 @@
                     justify-content: end;
                 }
         }
+        &.unborder {
+            border-top: 0;
+        }
         &--line {
             border-top: 0;
             display: flex;
