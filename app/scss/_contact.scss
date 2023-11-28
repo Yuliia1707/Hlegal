@@ -1,0 +1,162 @@
+.contact {
+    margin-bottom: 30px;
+    &__container {
+        @include viewport-lg {
+            display: flex;
+            gap: 60px;
+        }
+    }
+
+    &__info {
+        margin-bottom: 30px;
+        @include viewport-lg {
+            flex: 1 0 45%;
+        }
+    }
+
+    &__info-adres {
+        border-bottom: 4px solid $separator-color;
+        padding-bottom: 30px;
+        p {
+            font-size: 21px;
+            font-weight: 400;
+            line-height: 30px;
+            color: $main-color;
+        }
+    }
+
+    &__info-links {
+        border-bottom: 4px solid $separator-color;
+        padding: 30px 0;
+        &--one {
+            display: block;
+            margin-bottom: 15px;
+            font-size: 21px;
+            font-weight: 400;
+            line-height: 30px;
+            @include base-link ($alt-color);
+            text-decoration: none;
+        }
+        &--two {
+            font-size: 21px;
+            font-weight: 400;
+            line-height: 30px;
+            @include base-link ($regular-color);
+            text-decoration: none;
+        }
+    }
+
+    &__info-link {
+        padding-top: 30px;
+    }
+
+    &__info-link--fb {
+        display: flex;
+        gap: 10px;
+        text-decoration: none;
+        align-items: center;
+        @include base-link ($regular-color);
+        svg {
+            width: 38px;
+            height: 38px;
+            fill: $regular-color;
+        }
+        p {
+            font-size: 12px;
+            font-weight: 700;
+            line-height: 16px;
+            letter-spacing: 1px;
+            text-transform: uppercase;   
+        }
+    }
+
+    &__form {
+        background: $bg-color;
+        border-radius: $radius-md;
+        padding: 30px;
+        @include viewport-lg {
+            flex: 1 0 45%;
+        }
+    }
+
+    &__title {
+        @include subtitle;
+        @include main-gradient-text;
+        margin-bottom: 30px;
+    }
+
+    &__form-information {
+    }
+
+    &__form-information--name {
+        width: 100%;
+        height: 60px;
+        padding: 15px;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 26px;
+        color: $text-color;
+        border-radius: $radius-sm;
+        border: none;
+        margin-bottom: 15px;
+    }
+
+    &__form-information--message {
+        width: 100%;
+        min-height: 130px;
+        padding: 15px;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 26px;
+        border-radius: $radius-sm;
+        border: none;
+    }
+
+    &__subtitle {
+        margin: 30px 0 15px 0;
+        font-size: 14px;
+        font-weight: 700;
+        letter-spacing: 1px;
+        text-transform: uppercase;
+        color: $text-color;
+    }
+
+    &__form-contact {
+    }
+
+    &__form-contact--number {
+        width: 100%;
+        height: 60px;
+        padding: 15px;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 26px;
+        border-radius: $radius-sm;
+        border: none;
+        margin-bottom: 15px;
+    }
+    &__form-contact--email {
+        width: 100%;
+        height: 60px;
+        padding: 15px;
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 26px;
+        border-radius: $radius-sm;
+        border: none;
+        margin-bottom: 30px;
+    }
+    &__button {
+        width: 100%;
+        height: 60px;
+        padding: 18px 30px;
+        background: $regular-color;
+        box-shadow: 0px 0px 20px 0px rgba(36, 163, 255, 0.50);
+        color: $basic-white;
+        border-radius: $radius-md;
+        font-size: 16px;
+        font-weight: 700;
+    }
+}
+.wrapp {
+}
