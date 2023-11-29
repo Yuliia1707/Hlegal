@@ -4,7 +4,7 @@ $alt-color: #46466e;
 $soft-color: #686887;
 $accent-color: #f0145a;
 $regular-color: #24a3ff;
-$hover-coolor: #0085ff;
+$hover-color: #0085ff;
 $active-color: #006ccf;
 $bg-color: #f5f5fa;
 $bg-alt-color: #ededf7;
@@ -92,6 +92,7 @@ $breakpoint-xxl: 1920px;
 
     &:hover {
         color: $accent-color;
+        fill: $accent-color;
     }
 }
 

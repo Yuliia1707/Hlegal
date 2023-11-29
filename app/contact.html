@@ -59,10 +59,10 @@
                             <a class="header__list-link header__list-link--linkcol" href="team.html">team</a>
                         </li>
                         <li class="header__list-item">
-                            <a class="header__list-link header__list-link--linkcol" href="#">publications</a>
+                            <a class="header__list-link header__list-link--linkcol" href="publication.html">publications</a>
                         </li>
                         <li class="header__list-item">
-                            <a class="header__list-link header__list-link--linkcol active" href="contact.html">contact</a>
+                            <a class="header__list-link header__list-link--linkcol active" href="#">contact</a>
                         </li>
                     </ul>
                 </nav>
@@ -92,7 +92,7 @@
             <div class="contact__form">
                 <div class="wrapp">
                     <h1 class="contact__title">We would like to help you</h1>
-                    <form class="contact__form-information">
+                    <form class="contact__form-information" id="form">
                         <input class="contact__form-information--name" type="text" name="name" placeholder="Name" required>
                         <input class="contact__form-information--message" type="text" name="message" placeholder="Message" required>
                     </form>
@@ -101,7 +101,7 @@
                         <input class="contact__form-contact--number" type="tel" name="number" placeholder="Phone number" required>
                         <input class="contact__form-contact--email" type="email" name="email" placeholder="Email" required>
                     </form>
-                    <button class="contact__button">Send message</button>
+                    <button form="form" class="contact__button">Send message</button>
                 </div>
             </div>
         </div>
